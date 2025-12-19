@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evo | Dark Theme v20.5 (Final Polish)</title>
+    <title>Evo | Dark Theme v21.1 (Gap Fixed)</title>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -93,7 +93,7 @@
         .header-container.header-hidden { transform: translateY(-100%); }
         .header-inner { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
         .logo-area { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-        .header-logo-svg { height: 24px; width: auto; display: block; } 
+        .header-logo-img { height: 32px; width: auto; display: block; } 
         .menu-links { display: flex; gap: 32px; list-style: none; margin: 0; padding: 0; height: 80px; align-items: center; }
         .menu-item { height: 100%; display: flex; align-items: center; position: relative; }
         .menu-item > a, .menu-item > span { color: var(--color-ink); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.3s; opacity: 0.8; white-space: nowrap; }
@@ -114,7 +114,7 @@
         @media (max-width: 1024px) { .menu-links, .btn-assessment { display: none; } .mobile-toggle { display: block; } }
 
         /* --- HERO [LOCKED] --- */
-        .hero { position: relative; min-height: var(--section-height); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 150px 20px 80px 20px; overflow: hidden; }
+        .hero { position: relative; min-height: var(--section-height); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 150px 20px var(--section-padding) 20px; overflow: hidden; }
         .fox-badge-wrapper { position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 36px; opacity: 0; animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; width: 100%; max-width: 600px; }
         .badge-line { flex-grow: 1; height: 1px; max-width: 120px; }
         .line-left { background: linear-gradient(90deg, transparent 0%, rgba(255,255,255, 0.3) 100%); }
@@ -131,7 +131,7 @@
         .hero-btn-group { position: relative; z-index: 2; display: flex; gap: 20px; align-items: center; opacity: 0; animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
 
         /* --- SHOWCASE [LOCKED] --- */
-        .showcase-section { position: relative; min-height: var(--section-height); padding: 80px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: transparent; perspective: 1200px; overflow: hidden; }
+        .showcase-section { position: relative; min-height: var(--section-height); padding: var(--section-padding) 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: transparent; perspective: 1200px; overflow: hidden; }
         .video-frame-container { position: relative; z-index: 5; width: 100%; max-width: 1100px; background: #000; border-radius: 20px; box-shadow: var(--shadow-levitate); border: 1px solid rgba(255, 255, 255, 0.1); overflow: hidden; opacity: 0; transform: translateY(60px); transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.6s ease, opacity 0.6s ease; }
         .video-frame-container.revealed { opacity: 1; transform: translateY(0); }
         .video-frame-container:hover { transform: translateY(-12px) scale(1.01) !important; box-shadow: 0 40px 90px -10px rgba(0, 0, 0, 0.8); }
@@ -143,7 +143,7 @@
         .dashboard-video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         /* --- TRUSTED BY [LOCKED] --- */
-        .trusted-section { min-height: auto; padding: 60px 0; display: flex; flex-direction: column; justify-content: center; background: transparent; position: relative; z-index: 2; }
+        .trusted-section { min-height: auto; padding: var(--section-padding) 0; display: flex; flex-direction: column; justify-content: center; background: transparent; position: relative; z-index: 2; }
         .section-label { text-align: center; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; color: rgba(255, 255, 255, 0.4); margin-bottom: 50px; font-family: var(--font-body); }
         .marquee-wrapper { position: relative; width: 100%; max-width: 1200px; margin: 0 auto; overflow: hidden; padding: 10px 0; mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%); }
         .marquee-track { display: flex; gap: 80px; animation: scroll 35s linear infinite; width: max-content; }
@@ -156,11 +156,9 @@
         .card-inner, .info-content, .card-content-wrapper { background: var(--bg-card-solid) !important; border: 1px solid var(--color-border) !important; border-radius: 32px; box-shadow: var(--shadow-card); color: white; position: relative; z-index: 2; height: 100%; width: 100%; box-sizing: border-box; display: flex; flex-direction: column; }
         .stroke-layer { position: absolute; inset: 0; z-index: 5; pointer-events: none; background: radial-gradient(300px circle at var(--mouse-x) var(--mouse-y), #ff9d00, transparent 80%); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; padding: 2px; opacity: 0; transition: opacity 0.3s; border-radius: inherit; }
         .spotlight-layer { position: absolute; inset: 0; z-index: 6; pointer-events: none; background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06), transparent 60%); opacity: 0; transition: opacity 0.3s; }
-        .bento-card:hover .stroke-layer, .bento-card:hover .spotlight-layer, .step-card:hover .stroke-layer, .step-card:hover .spotlight-layer, .dark-card:hover .stroke-layer, .dark-card:hover .spotlight-layer { opacity: 1; }
-        
+        .bento-card:hover .stroke-layer, .bento-card:hover .spotlight-layer, .step-card:hover .stroke-layer, .step-card:hover .spotlight-layer, .dark-card:hover .stroke-layer, .dark-card:hover .spotlight-layer, .stacked-card:hover .stroke-layer, .stacked-card:hover .spotlight-layer { opacity: 1; }
         .stacked-card .stroke-layer { position: absolute; inset: 0; z-index: 5; pointer-events: none; background: radial-gradient(300px circle at 50% 0%, #ff9d00, transparent 80%); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; padding: 2px; opacity: 1; border-radius: inherit; }
         .stacked-card:hover .spotlight-layer { opacity: 1; }
-
         .bento-card:hover, .step-card:hover { transform: translateY(-6px); }
         .card-inner h3, .dark-card h3, .dark-card h4, .stacked-card h3, .stacked-card h4 { color: #FFFFFF; font-family: var(--font-display); }
         .card-inner p, .dark-card p, .dark-card li, .stacked-card p, .stacked-card li { color: rgba(255, 255, 255, 0.7); }
@@ -178,8 +176,9 @@
         h3 { font-size: 1.5rem; margin-bottom: 16px; }
         p { font-size: 1.05rem; line-height: 1.6; }
 
-        /* --- CAPABILITIES (STACKED CARDS) [LOCKED] --- */
-        .capabilities-stack-wrapper { position: relative; padding-bottom: 40vh; width: 100%; z-index: 10; }
+        /* --- CAPABILITIES (STACKED CARDS) [UPDATED: GAP FIXED] --- */
+        /* Changed padding-bottom from 40vh to 15vh to reduce gap */
+        .capabilities-stack-wrapper { position: relative; padding-bottom: 15vh; width: 100%; z-index: 10; }
         .stack-container { width: 90%; max-width: 1300px; margin: 0 auto; position: relative; }
         .stacked-card { position: sticky; top: calc(50vh - 350px); height: 700px; margin-bottom: 80px; border-radius: 32px; background: #010612; border: 1px solid var(--color-border); box-shadow: 0 -20px 60px rgba(0,0,0,0.8); overflow: hidden; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: translate3d(0, 0, 0); -webkit-mask-image: -webkit-radial-gradient(white, black); transition: box-shadow 0.6s ease, filter 0.3s ease, opacity 0.3s ease; }
         .stacked-card.scroll-active { z-index: 10; box-shadow: 0 -20px 60px rgba(0,0,0,0.8), 0 -100px 150px rgba(255, 157, 0, 0.6); }
@@ -203,7 +202,8 @@
         .pill-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); color: #fff; }
         .pill-btn.active { background: var(--color-orange); color: #000; border-color: var(--color-orange); font-weight: 700; }
 
-        /* --- HOW IT WORKS [UPDATED: PADDING REMOVED] --- */
+        /* --- HOW IT WORKS [UPDATED: GAP REMOVED] --- */
+        /* Removed top padding to fix gap */
         .process-section-a { min-height: var(--section-height); padding: 0 20px 100px 20px; display: flex; flex-direction: column; justify-content: center; background: transparent; max-width: 1400px; margin: 0 auto; position: relative; z-index: 2; }
         .process-header { text-align: center; margin-bottom: 80px; }
         .process-tag { font-size: 0.75rem; font-weight: 800; color: var(--color-orange); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px; display: block; }
@@ -219,7 +219,7 @@
         @media (max-width: 1024px) { .steps-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 600px) { .steps-grid { grid-template-columns: 1fr; } }
 
-        /* --- OUTCOMES [UPDATED: MAX WIDTH & PADDING EQUALIZED] --- */
+        /* --- OUTCOMES [LOCKED] --- */
         .outcomes-ledger { min-height: var(--section-height); padding: var(--section-padding) 20px; display: flex; flex-direction: column; justify-content: center; background: transparent; }
         .ledger-container { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; width: 100%; padding: 0 24px; box-sizing: border-box; }
         .section-tag { font-size: 0.75rem; font-weight: 800; color: var(--color-orange); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; display: block; }
@@ -238,11 +238,9 @@
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         @media (max-width: 900px) { .ledger-container { grid-template-columns: 1fr; } .stack-card { aspect-ratio: 16/9; order: -1; } }
 
-        /* --- FOOTER [UPDATED: REMOVED CTA] --- */
+        /* --- FOOTER [LOCKED] --- */
         .footer-wrapper { background: #000205; border-top: 1px solid var(--color-border); padding: 0; position: relative; z-index: 20; font-family: var(--font-body); color: var(--color-ink); }
-        /* Removed .footer-cta entirely */
-        
-        .main-footer { max-width: 1400px; margin: 0 auto; padding: 80px 20px 40px 20px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; border-bottom: 1px solid var(--color-border); }
+        .main-footer { max-width: 1400px; margin: 0 auto; padding: 100px 20px 40px 20px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; border-bottom: 1px solid var(--color-border); }
         .f-col h4 { font-size: 0.9rem; color: var(--color-orange); margin-bottom: 25px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 800; }
         .f-col ul { list-style: none; padding: 0; margin: 0; }
         .f-col li { margin-bottom: 14px; }
@@ -276,15 +274,7 @@
         <div class="header-inner">
             <div class="logo-area">
                 <a href="#">
-                    <svg viewBox="0 0 140 32" class="header-logo-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.5 4V28M2.5 16H12.5M12.5 4V28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
-                        <circle cx="26" cy="16" r="10" stroke="#FFFFFF" stroke-width="3"/>
-                        <path d="M42 4L50 28L58 4" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M70 4V28M70 4L84 28M84 4V28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M92 4L88 16H96L92 28" stroke="#ff9d00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <line x1="104" y1="6" x2="104" y2="26" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-                        <text x="112" y="21" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10" letter-spacing="1">ACADEMY</text>
-                    </svg>
+                    <img src="https://cms.evam.com/Uploads/5162c9fa2c164fe491ca20bfb11b52fb.png" class="header-logo-img" alt="Evo Logo">
                 </a>
             </div>
             <ul class="menu-links">
@@ -346,7 +336,7 @@
     </section>
 
     <section class="why-evo-section" id="why-evo">
-        <div class="why-header"><span class="why-tag">/// THE INTELLIGENCE GAP</span><h2>Why choose Evo?</h2><p>Marketers don’t need another automation tool; they need intelligence that moves at the speed of the customer.</p></div>
+        <div class="why-header"><span class="why-tag">/// THE INTELLIGENCE GAP</span><h2>Why choose Evo?</h2><p>Marketers donâ€™t need another automation tool; they need intelligence that moves at the speed of the customer.</p></div>
         <div class="bento-grid">
             <div class="bento-card">
                 <div class="stroke-layer"></div><div class="spotlight-layer"></div>
@@ -371,11 +361,11 @@
         <div class="stack-container">
             
             <div class="stacked-card" id="card-1">
-                <div class="stroke-layer"></div> <div class="spotlight-layer"></div>
                 <div class="stack-mask-wrapper">
+                    <div class="stroke-layer"></div><div class="spotlight-layer"></div>
                     <div class="stack-inner">
                         <div class="stack-header">
-                            <h3 class="stack-title">1. Evo Build</h3>
+                            <h3 class="stack-title">Evo Build</h3>
                             <p class="stack-desc">Eliminate the bottlenecks of manual campaign creation. Evo Build empowers your team to generate comprehensive customer journeys.</p>
                         </div>
                         <div class="stack-pills">
@@ -401,11 +391,11 @@
             </div>
 
             <div class="stacked-card" id="card-2">
-                <div class="stroke-layer"></div> <div class="spotlight-layer"></div>
                 <div class="stack-mask-wrapper">
+                    <div class="stroke-layer"></div><div class="spotlight-layer"></div>
                     <div class="stack-inner">
                         <div class="stack-header">
-                            <h3 class="stack-title">2. Evo Decide</h3>
+                            <h3 class="stack-title">Evo Decide</h3>
                             <p class="stack-desc">Never miss an opportunity. Evo Decide serves as the central brain, analyzing millions of data points to determine the next best action.</p>
                         </div>
                         <div class="stack-pills">
@@ -431,11 +421,11 @@
             </div>
 
             <div class="stacked-card" id="card-3">
-                <div class="stroke-layer"></div> <div class="spotlight-layer"></div>
                 <div class="stack-mask-wrapper">
+                    <div class="stroke-layer"></div><div class="spotlight-layer"></div>
                     <div class="stack-inner">
                         <div class="stack-header">
-                            <h3 class="stack-title">3. Evo Sense</h3>
+                            <h3 class="stack-title">Evo Sense</h3>
                             <p class="stack-desc">Go beyond basic analytics. Evo Sense continuously listens to digital signals across all channels to understand the true intent.</p>
                         </div>
                         <div class="stack-pills">
@@ -468,7 +458,7 @@
         <div class="steps-grid">
             <div class="step-card reveal-step" style="transition-delay: 0s;">
                 <div class="stroke-layer"></div><div class="spotlight-layer"></div>
-                <div class="card-inner"><div class="step-number">01</div><div class="step-content"><div class="step-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a9 9 0 0 0-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2a7 7 0 0 1 7-7 7 7 0 0 1 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7a9 9 0 0 0-9-9z"></path></svg></div><h3>Listen</h3><p>Evo ingests real-time signals from every touchpoint—web, mobile, CRM, and offline data.</p></div></div>
+                <div class="card-inner"><div class="step-number">01</div><div class="step-content"><div class="step-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a9 9 0 0 0-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2a7 7 0 0 1 7-7 7 7 0 0 1 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7a9 9 0 0 0-9-9z"></path></svg></div><h3>Listen</h3><p>Evo ingests real-time signals from every touchpointâ€"web, mobile, CRM, and offline data.</p></div></div>
             </div>
             <div class="step-card reveal-step" style="transition-delay: 0.5s;">
                 <div class="stroke-layer"></div><div class="spotlight-layer"></div>
@@ -509,7 +499,7 @@
         </div>
         <div class="bottom-footer">
             <div class="bf-left">
-                <svg viewBox="0 0 140 32" class="header-logo-svg" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:24px; margin-bottom:16px;"><path d="M2.5 4V28M2.5 16H12.5M12.5 4V28" stroke="white" stroke-width="3" stroke-linecap="round"/><circle cx="26" cy="16" r="10" stroke="white" stroke-width="3"/><path d="M42 4L50 28L58 4" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M70 4V28M70 4L84 28M84 4V28" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M92 4L88 16H96L92 28" stroke="#ff9d00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="6" x2="104" y2="26" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="112" y="21" fill="white" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10" letter-spacing="1">ACADEMY</text></svg>
+                <img src="https://cms.evam.com/Uploads/5162c9fa2c164fe491ca20bfb11b52fb.png" class="header-logo-img" style="height:24px; margin-bottom:16px;" alt="Evo Logo">
                 <div class="f-tagline">End-to-end marketing platform<br>For real-time & cross-channel customer experiences.</div>
             </div>
             <div class="bf-right">
@@ -519,7 +509,7 @@
                     <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
                 </div>
                 <div class="f-copyright">
-                    © 2025 Evam. All rights reserved. <span>|</span> <a href="#">Notice at collection</a> <span>|</span> <a href="#">Your Privacy Choices</a>
+                    Â© 2025 Evam. All rights reserved. <span>|</span> <a href="#">Notice at collection</a> <span>|</span> <a href="#">Your Privacy Choices</a>
                 </div>
             </div>
         </div>
